@@ -192,3 +192,22 @@ Planned:
 Mohammad Nazir Sirat
 QA Automation Portfolio
 
+
+
+
+## Jenkins Test Execution
+
+Configured a local Jenkins Freestyle job to retrieve this
+repository’s main branch and run the automated tests using Maven.
+
+- Job name: Herat-Table-Automation
+- Build goals: clean test
+- Test framework: TestNG with Selenium WebDriver
+- Results: 7 tests passed, 0 failures, 0 errors, 0 skipped
+- Jenkins publishes test results using:
+  target/surefire-reports/TEST-*.xml
+- Builds are started manually using Build Now.
+
+### Local requirements
+Jenkins and the website's Live Server must be running.
+The tests access http://127.0.0.1:5500/index.html.
